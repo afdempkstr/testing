@@ -12,7 +12,7 @@ namespace Testing
 
         public bool IsFromAthens(int cid)
         {
-            var customer = _databaseManager.FindCustomerById(5);
+            var customer = _databaseManager.FindCustomerById(cid);
 
             if (customer.City == "Αθήνα")
             {
