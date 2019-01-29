@@ -10,10 +10,14 @@ namespace Testing
             Console.WriteLine(calculator.Add(5, 5));
             
 
-            var customerManager = new CustomerManager();
+            var customerManager = new CustomerManager(new DatabaseManager());
             if (customerManager.IsFromAthens(5))
             {
                 Console.WriteLine("Γκαγκαρος");
+            }
+            else
+            {
+                Console.Write("!Γκαγκαρος");
             }
 
             Console.Read();

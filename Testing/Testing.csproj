@@ -50,6 +50,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerManager.cs" />
     <Compile Include="DatabaseManager.cs" />
+    <Compile Include="IDatabaseManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

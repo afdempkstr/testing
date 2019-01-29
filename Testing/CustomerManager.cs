@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Testing
+﻿namespace Testing
 {
     public class CustomerManager
     {
-        private DatabaseManager _databaseManager = new DatabaseManager();
+        private IDatabaseManager _databaseManager;
+
+        public CustomerManager(IDatabaseManager manager)
+        {
+            _databaseManager = manager;
+        }
 
         public bool IsFromAthens(int cid)
         {

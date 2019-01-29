@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Testing
 {
-    public class DatabaseManager
+    public class DatabaseManager : IDatabaseManager
     {
         private static string _connectionString = "Server=localhost;Database=bank;User Id=dbuser;Password=dbpass";
 
