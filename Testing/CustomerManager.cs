@@ -1,4 +1,7 @@
-﻿namespace Testing
+﻿using System.Data;
+using System.Data.Common;
+
+namespace Testing
 {
     public class CustomerManager
     {
@@ -11,9 +14,16 @@
 
         public bool IsFromAthens(int cid)
         {
-            var customer = _databaseManager.FindCustomerById(cid);
+            Customer customer = null;
+            try
+            {
+                customer = _databaseManager.FindCustomerById(cid);
+            }
+            catch (DBConcurrencyException)
+            {
+            }
 
-            if (customer.City == "Αθήνα")
+            if (customer?.City == "Αθήνα")
             {
                 return true;
             }
